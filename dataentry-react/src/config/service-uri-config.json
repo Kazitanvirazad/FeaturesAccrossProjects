@@ -1,0 +1,18 @@
+{
+    "listData": {
+        "uri": "listdata",
+        "method": "GET"
+    },
+    "searchbykeyword": {
+        "uri": "searchprojectdata",
+        "method": "GET"
+    },
+    "addData": {
+        "uri": "addData",
+        "method": "POST"
+    },
+    "test": {
+        "uri": "test",
+        "method": "GET"
+    }
+}

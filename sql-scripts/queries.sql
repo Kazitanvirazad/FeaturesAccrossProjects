@@ -1,0 +1,41 @@
+-- create table test(
+-- 	name varchar,
+-- 	city varchar
+-- );
+-- insert into test (name,city) values ('kazi','bangalore'), ('fahim','berhampore');
+-- select * from test;
+-- select 1;
+-- create table feature(
+--  	feature_reference serial UNIQUE NOT NULL,
+--  	practice varchar(100) NOT NULL,
+-- 	domain varchar(100) NOT NULL,
+--  	sector varchar(100) NOT NULL,
+--  	category varchar(100) NOT NULL,
+--  	sub_category varchar(100) NOT NULL,
+--  	feature_short_name varchar(100) NOT NULL,
+--  	feature_description varchar(300) NOT NULL,
+--  	CONSTRAINT PK_feature_feature_reference PRIMARY KEY(feature_reference)
+-- );
+-- ALTER SEQUENCE feature_feature_reference_seq RESTART WITH 100;
+
+-- create table project(
+--  	project_name VARCHAR(100) UNIQUE NOT NULL,
+--  	contact_point varchar(100) NOT NULL,
+--  	artifacts_details varchar(100) NOT NULL,
+--   	tools_and_platform varchar(100) NOT NULL,
+--   	used_in_year varchar(100) NOT NULL,
+-- 	feature_reference int NOT NULL,
+-- 	CONSTRAINT PK_project_project_name PRIMARY KEY(project_name),
+-- 	CONSTRAINT feature_FK_feature_reference FOREIGN KEY(feature_reference) REFERENCES
+--     feature(feature_reference)
+-- );
+-- select feature.* from feature order by feature.feature_reference desc limit 1;
+-- select feature.* from feature;
+-- insert into project (project_name,contact_point,artifacts_details,tools_and_platform,used_in_year,feature_reference) 
+-- values ('Jenny Craig','PS Sales','Web App','SFCC','2023',101);
+
+--  insert into feature (practice,domain,sector,category,sub_category,feature_short_name,feature_description) values 
+-- ('practice data','domain data','sector data','category data','sub_category data','feature_short_name data','feature_description data');
+
+-- select p.project_name,p.contact_point,p.artifacts_details,p.tools_and_platform,p.used_in_year,p.feature_reference,f.practice,f.domain,f.sector,f.category,f.sub_category,f.feature_short_name,f.feature_description from project p, feature f where p.feature_reference = f.feature_reference and f.feature_reference = 108;
+-- select p.project_name,p.contact_point,p.artifacts_details,p.tools_and_platform,p.used_in_year,p.feature_reference,f.practice,f.domain,f.sector,f.category,f.sub_category,f.feature_short_name,f.feature_description from project p, feature f where p.feature_reference = f.feature_reference;

@@ -1,7 +1,8 @@
 apache-tomcat-10.1.8/
 apache-tomcat-10.0.8-src/
 apache-tomcat-9.0.74/
-
+azureconfig.txt
+projectresources/
 # Compiled class file
 *.class
 workspace/

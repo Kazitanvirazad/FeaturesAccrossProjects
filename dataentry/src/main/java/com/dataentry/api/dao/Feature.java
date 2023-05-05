@@ -1,93 +1,75 @@
 package com.dataentry.api.dao;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 
  * @author kazi
  *
  */
 public class Feature {
-	private Integer feature_reference;
-	private String practice;
-	private String domain;
-	private String sector;
+	private int feature_ref = Integer.MIN_VALUE;
+	private String project_name;
 	private String category;
 	private String sub_category;
-	private String feature_short_name;
-	private String feature_description;
+	private String feature_name;
+	private String description;
+	private String type;
+	private String poc;
+	private String artifact_detail;
+	private String used_year;
+	private boolean feature_extended;
+	private String alternate_POC;
 
 	public Feature() {
 		super();
 	}
 
-	public Feature(Integer feature_reference, String practice, String domain, String sector, String category,
-			String sub_category, String feature_short_name) {
+	public Feature(int feature_ref, String project_name, String category, String sub_category, String feature_name,
+			String description, String type, String poc, String artifact_detail, String used_year,
+			boolean feature_extended, String alternate_POC) {
 		super();
-		this.feature_reference = feature_reference;
-		this.practice = practice;
-		this.domain = domain;
-		this.sector = sector;
+		this.feature_ref = feature_ref;
+		this.project_name = project_name;
 		this.category = category;
 		this.sub_category = sub_category;
-		this.feature_short_name = feature_short_name;
-		this.feature_description = this.category + "-" + this.sub_category + "-" + this.feature_short_name;
+		this.feature_name = feature_name;
+		this.description = description;
+		this.type = type;
+		this.poc = poc;
+		this.artifact_detail = artifact_detail;
+		this.used_year = used_year;
+		this.feature_extended = feature_extended;
+		this.alternate_POC = alternate_POC;
 	}
 
-	public Feature(String practice, String domain, String sector, String category, String sub_category,
-			String feature_short_name) {
-		super();
-		this.feature_reference = null;
-		this.practice = practice;
-		this.domain = domain;
-		this.sector = sector;
-		this.category = category;
-		this.sub_category = sub_category;
-		this.feature_short_name = feature_short_name;
-		this.feature_description = this.category + "-" + this.sub_category + "-" + this.feature_short_name;
+	public List<Object> createParamsList() {
+		List<Object> paramList = new ArrayList<>();
+		for (Field f : Feature.class.getDeclaredFields()) {
+			try {
+				paramList.add(f.get(this));
+			} catch (IllegalArgumentException | IllegalAccessException e) {
+				e.printStackTrace();
+			}
+		}
+		if (paramList.size() > 1) {
+			paramList.remove(0);
+		}
+		return paramList;
 	}
 
-	public Feature(Integer feature_reference, String practice, String domain, String sector, String category,
-			String sub_category, String feature_short_name, String feature_description) {
-		super();
-		this.feature_reference = feature_reference;
-		this.practice = practice;
-		this.domain = domain;
-		this.sector = sector;
-		this.category = category;
-		this.sub_category = sub_category;
-		this.feature_short_name = feature_short_name;
-		this.feature_description = feature_description;
+	public int getFeature_ref() {
+		return feature_ref;
 	}
 
-	public Integer getFeature_reference() {
-		return feature_reference;
+	public String getProject_name() {
+		return project_name;
 	}
 
-	public void setFeature_reference(Integer feature_reference) {
-		this.feature_reference = feature_reference;
-	}
-
-	public String getPractice() {
-		return practice;
-	}
-
-	public void setPractice(String practice) {
-		this.practice = practice;
-	}
-
-	public String getDomain() {
-		return domain;
-	}
-
-	public void setDomain(String domain) {
-		this.domain = domain;
-	}
-
-	public String getSector() {
-		return sector;
-	}
-
-	public void setSector(String sector) {
-		this.sector = sector;
+	public void setProject_name(String project_name) {
+		this.project_name = project_name;
 	}
 
 	public String getCategory() {
@@ -106,20 +88,68 @@ public class Feature {
 		this.sub_category = sub_category;
 	}
 
-	public String getFeature_short_name() {
-		return feature_short_name;
+	public String getFeature_name() {
+		return feature_name;
 	}
 
-	public void setFeature_short_name(String feature_short_name) {
-		this.feature_short_name = feature_short_name;
+	public void setFeature_name(String feature_name) {
+		this.feature_name = feature_name;
 	}
 
-	public String getFeature_description() {
-		return feature_description;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setFeature_description(String feature_description) {
-		this.feature_description = feature_description;
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getPoc() {
+		return poc;
+	}
+
+	public void setPoc(String poc) {
+		this.poc = poc;
+	}
+
+	public String getArtifact_detail() {
+		return artifact_detail;
+	}
+
+	public void setArtifact_detail(String artifact_detail) {
+		this.artifact_detail = artifact_detail;
+	}
+
+	public String getUsed_year() {
+		return used_year;
+	}
+
+	public void setUsed_year(String used_year) {
+		this.used_year = used_year;
+	}
+
+	public boolean getFeature_extended() {
+		return feature_extended;
+	}
+
+	public void setFeature_extended(boolean feature_extended) {
+		this.feature_extended = feature_extended;
+	}
+
+	public String getAlternate_POC() {
+		return alternate_POC;
+	}
+
+	public void setAlternate_POC(String alternate_POC) {
+		this.alternate_POC = alternate_POC;
 	}
 
 }

@@ -1,29 +1,28 @@
 package com.dataentry.database.helpers;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
 
-import com.dataentry.api.helpers.ResourceHelpers;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
-import java.io.FileReader;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 public class ORM_DBConnector {
 
-	private String getDatabaseURL() {
-		ResourceHelpers resourceHelpers = new ResourceHelpers();
-		String url = resourceHelpers.getResource("url", "dbCredentials.properties");
-		return url != null ? url : "";
-	}
-
 	public Connection getConnection() throws URISyntaxException, SQLException {
-		String url = getDatabaseURL();
-		return DriverManager.getConnection(url);
+		InitialContext cxt;
+		DataSource ds;
+		Connection connection = null;
+
+		try {
+			cxt = new InitialContext();
+			ds = (DataSource) cxt.lookup("java:/comp/env/jdbc/postgres");
+			connection = ds.getConnection();
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+		return connection;
 	}
 }

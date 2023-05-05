@@ -18,43 +18,54 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		<servlet-name>HomePageServlet</servlet-name>
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<display-name>AddData</display-name>
-		<servlet-name>AddData</servlet-name>
-		<servlet-class>com.dataentry.api.controllers.AddData</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AddData</servlet-name>
-		<url-pattern>/addData</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<display-name>GetListData</display-name>
-		<servlet-name>GetListData</servlet-name>
-		<servlet-class>com.dataentry.api.controllers.GetListData</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GetListData</servlet-name>
-		<url-pattern>/listdata</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<display-name>SearchProjectData</display-name>
-		<servlet-name>SearchProjectData</servlet-name>
-		<servlet-class>com.dataentry.api.controllers.SearchProjectData</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SearchProjectData</servlet-name>
-		<url-pattern>/searchprojectdata</url-pattern>
-	</servlet-mapping>
 
 	<servlet>
-		<display-name>Test</display-name>
-		<servlet-name>Test</servlet-name>
-		<servlet-class>com.dataentry.api.controllers.Test</servlet-class>
+		<display-name>AddProject</display-name>
+		<servlet-name>AddProject</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.AddProject</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Test</servlet-name>
-		<url-pattern>/test</url-pattern>
+		<servlet-name>AddProject</servlet-name>
+		<url-pattern>/addproject</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<display-name>AddFeature</display-name>
+		<servlet-name>AddFeature</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.AddFeature</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddFeature</servlet-name>
+		<url-pattern>/addfeature</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>FeatureList</display-name>
+		<servlet-name>FeatureList</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.FeatureList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FeatureList</servlet-name>
+		<url-pattern>/featurelist</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>SearchFeature</display-name>
+		<servlet-name>SearchFeature</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.SearchFeature</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchFeature</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<display-name>ProjectList</display-name>
+		<servlet-name>ProjectList</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.ProjectList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProjectList</servlet-name>
+		<url-pattern>/projectlist</url-pattern>
+	</servlet-mapping>
+
+
 	<resource-ref>
 		<description>Connection Pool</description>
 		<res-ref-name>jdbc/postgres</res-ref-name>

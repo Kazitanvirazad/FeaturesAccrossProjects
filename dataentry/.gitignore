@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 projectresources/
+*.zip
 apache-tomcat-10.1.8/
 ### IntelliJ IDEA ###
 .idea/

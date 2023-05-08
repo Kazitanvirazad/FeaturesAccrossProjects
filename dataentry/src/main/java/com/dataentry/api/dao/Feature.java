@@ -4,13 +4,15 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.dataentry.api.helpers.ResourceHelpers;
+
 /**
  * 
  * @author kazi
  *
  */
 public class Feature {
-	private int feature_ref = Integer.MIN_VALUE;
+	private String feature_ref;
 	private String project_name;
 	private String category;
 	private String sub_category;
@@ -27,7 +29,7 @@ public class Feature {
 		super();
 	}
 
-	public Feature(int feature_ref, String project_name, String category, String sub_category, String feature_name,
+	public Feature(String feature_ref, String project_name, String category, String sub_category, String feature_name,
 			String description, String type, String poc, String artifact_detail, String used_year,
 			boolean feature_extended, String alternate_POC) {
 		super();
@@ -45,6 +47,22 @@ public class Feature {
 		this.alternate_POC = alternate_POC;
 	}
 
+	public Feature(Feature feature) {
+		super();
+		this.feature_ref = ResourceHelpers.generateUUID();
+		this.project_name = feature.project_name;
+		this.category = feature.category;
+		this.sub_category = feature.sub_category;
+		this.feature_name = feature.feature_name;
+		this.description = feature.description;
+		this.type = feature.type;
+		this.poc = feature.poc;
+		this.artifact_detail = feature.artifact_detail;
+		this.used_year = feature.used_year;
+		this.feature_extended = feature.feature_extended;
+		this.alternate_POC = feature.alternate_POC;
+	}
+
 	public List<Object> createParamsList() {
 		List<Object> paramList = new ArrayList<>();
 		for (Field f : Feature.class.getDeclaredFields()) {
@@ -54,14 +72,15 @@ public class Feature {
 				e.printStackTrace();
 			}
 		}
-		if (paramList.size() > 1) {
-			paramList.remove(0);
-		}
 		return paramList;
 	}
 
-	public int getFeature_ref() {
+	public String getFeature_ref() {
 		return feature_ref;
+	}
+
+	public void setFeature_ref(String feature_ref) {
+		this.feature_ref = feature_ref;
 	}
 
 	public String getProject_name() {

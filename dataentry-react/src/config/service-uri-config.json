@@ -1,18 +1,22 @@
 {
-    "listData": {
-        "uri": "listdata",
+    "ProjectList": {
+        "uri": "projectlist",
         "method": "GET"
     },
-    "searchbykeyword": {
-        "uri": "searchprojectdata",
+    "SearchFeature": {
+        "uri": "search",
         "method": "GET"
     },
-    "addData": {
-        "uri": "addData",
+    "AddProject": {
+        "uri": "addproject",
         "method": "POST"
     },
-    "test": {
-        "uri": "test",
+    "AddFeature": {
+        "uri": "addfeature",
+        "method": "POST"
+    },
+    "FeatureList": {
+        "uri": "featurelist",
         "method": "GET"
     }
 }

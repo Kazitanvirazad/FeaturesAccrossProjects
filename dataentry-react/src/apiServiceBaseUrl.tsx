@@ -1,8 +1,6 @@
 const apiServiceBaseUrl = () => {
-    let hostname = window.location.hostname;
-    let protocol = window.location.protocol;
-    let port = window.location.port.length > 0 ? (':' + window.location.port) : '';
-    return protocol + "//" + hostname + port + '/';
+    return 'https://kazidataentryapp.azurewebsites.net/';
+    // return 'http://localhost:5173/';
 }
 
 export default apiServiceBaseUrl;

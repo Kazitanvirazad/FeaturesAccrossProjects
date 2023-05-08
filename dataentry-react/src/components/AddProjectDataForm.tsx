@@ -1,39 +1,35 @@
 import serviceuriconfig from '../config/service-uri-config.json';
 import apiServiceBaseUrl from '../apiServiceBaseUrl';
 
-interface Props {
-    project_name: string;
-    contact_point: string;
-    artifacts_details: string;
-    tools_and_platform: string;
-    used_in_year: string;
-    feature: {
-        practice: string;
-        domain: string;
-        sector: string;
-        category: string;
-        sub_category: string;
-        feature_short_name: string;
-    }
-}
+const AddProjectDataForm = ({ formData }: any) => {
 
-const AddProjectDataForm = (formData: Props) => {
-    let resData: any = formData;
+    let resData: any = {
+        regionUS: false,
+        regionCA: false,
+        regionEU: false,
+        regionAUNZ: false,
+        regionChina: false,
+        multi_site: false,
+        multi_brand: false
+    };
+
     let handleChange = (event: any) => {
         const name = event.target.name;
         const value = event.target.value;
-        if (name in resData) {
-            resData[name] = value;
-        } else if (resData.feature && name in resData.feature) {
-            resData.feature[name] = value;
-        }
+        resData[name] = value;
+    };
+
+    let handleSelectChange = (event: any) => {
+        let name = event.target.name;
+        let value = event.target.value.toLowerCase() === 'true';
+        resData[name] = value;
     };
 
     let onFormSubmit = (event: any) => {
         event.preventDefault();
         let url = apiServiceBaseUrl();
-        let uri = serviceuriconfig.addData.uri;
-        let method = serviceuriconfig.addData.method;
+        let uri = serviceuriconfig.AddProject.uri;
+        let method = serviceuriconfig.AddProject.method;
         url += uri;
         fetch(url, {
             method: method,
@@ -47,58 +43,99 @@ const AddProjectDataForm = (formData: Props) => {
             if (data && !data.error) {
                 alert("Data Added successfully");
             } else {
-                alert(data.errorMsg);
+                alert(data.message);
             }
         });
-    }
+    };
 
     return (
         <>
             <div>
-                <form id='add-project-form' onSubmit={onFormSubmit} action="/addData" method="post">
+                <form id='add-project-form' onSubmit={onFormSubmit} action="/addproject" method="post">
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.project_name}>Project Name</label>
                         <input name={formData.project_name} className="form-control" type="text" id={formData.project_name} defaultValue="" onChange={handleChange} required />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.contact_point}>Contact Point</label>
-                        <input name={formData.contact_point} className="form-control" type="text" id={formData.contact_point} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.regionUS.label}>{formData.regionUS.name}</label>
+                        <select className="form-control" name={formData.regionUS.label} id={formData.regionUS.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.artifacts_details}>Artifacts Details</label>
-                        <input name={formData.artifacts_details} className="form-control" type="text" id={formData.artifacts_details} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.regionCA.label}>{formData.regionCA.name}</label>
+                        <select className="form-control" name={formData.regionCA.label} id={formData.regionCA.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.tools_and_platform}>Tools And Platform</label>
-                        <input name={formData.tools_and_platform} className="form-control" type="text" id={formData.tools_and_platform} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.regionEU.label}>{formData.regionEU.name}</label>
+                        <select className="form-control" name={formData.regionEU.label} id={formData.regionEU.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.used_in_year}>Used In Year</label>
-                        <input name={formData.used_in_year} className="form-control" type="text" id={formData.used_in_year} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.regionAUNZ.label}>{formData.regionAUNZ.name}</label>
+                        <select className="form-control" name={formData.regionAUNZ.label} id={formData.regionAUNZ.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.feature.practice}>Practice</label>
-                        <input name={formData.feature.practice} className="form-control" type="text" id={formData.feature.practice} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.regionChina.label}>{formData.regionChina.name}</label>
+                        <select className="form-control" name={formData.regionChina.label} id={formData.regionChina.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.feature.domain}>Domain</label>
-                        <input name={formData.feature.domain} className="form-control" type="text" id={formData.feature.domain} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.sector}>Sector</label>
+                        <input name={formData.sector} className="form-control" type="text" id={formData.sector} defaultValue="" onChange={handleChange} required />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.feature.sector}>Sector</label>
-                        <input name={formData.feature.sector} className="form-control" type="text" id={formData.feature.sector} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.project_contact_point}>Project Contact Point</label>
+                        <input name={formData.project_contact_point} className="form-control" type="text" id={formData.project_contact_point} defaultValue="" onChange={handleChange} required />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.feature.category}>Category</label>
-                        <input name={formData.feature.category} className="form-control" type="text" id={formData.feature.category} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.multi_brand.label}>{formData.multi_brand.name}</label>
+                        <select className="form-control" name={formData.multi_brand.label} id={formData.multi_brand.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.feature.sub_category}>Sub Category</label>
-                        <input name={formData.feature.sub_category} className="form-control" type="text" id={formData.feature.sub_category} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.brandnames}>Brand Names</label>
+                        <input name={formData.brandnames} className="form-control" type="text" id={formData.brandnames} defaultValue="" onChange={handleChange} required />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label" htmlFor={formData.feature.feature_short_name}>Feature Short Name</label>
-                        <input name={formData.feature.feature_short_name} className="form-control" type="text" id={formData.feature.feature_short_name} defaultValue="" onChange={handleChange} required />
+                        <label className="form-label" htmlFor={formData.multi_site.label}>{formData.multi_site.name}</label>
+                        <select className="form-control" name={formData.multi_site.label} id={formData.multi_site.label} onChange={handleSelectChange} defaultValue="false">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor={formData.project_notes}>Project Notes</label>
+                        <input name={formData.project_notes} className="form-control" type="text" id={formData.project_notes} defaultValue="" onChange={handleChange} required />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor={formData.last_served_year}>Last Served Year</label>
+                        <input name={formData.last_served_year} className="form-control" type="text" id={formData.last_served_year} defaultValue="" onChange={handleChange} required />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor={formData.client_base}>Client Base</label>
+                        <input name={formData.client_base} className="form-control" type="text" id={formData.client_base} defaultValue="" onChange={handleChange} required />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor={formData.practice}>Practice</label>
+                        <input name={formData.practice} className="form-control" type="text" id={formData.practice} defaultValue="" onChange={handleChange} required />
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor={formData.domain}>Domain</label>
+                        <input name={formData.domain} className="form-control" type="text" id={formData.domain} defaultValue="" onChange={handleChange} required />
                     </div>
                     <div>
                         <input className="btn btn-primary" type="submit" />

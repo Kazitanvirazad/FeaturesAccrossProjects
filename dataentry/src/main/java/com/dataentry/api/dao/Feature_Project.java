@@ -4,17 +4,19 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.dataentry.api.helpers.ResourceHelpers;
+
 /**
  * 
  * @author kazazad
  *
  */
 public class Feature_Project {
-	private int id;
+	private String id;
 	private String project_name;
 	private String poc;
 	private String artifact_detail;
-	private int feature_ref;
+	private String feature_ref;
 	private String used_year;
 	private boolean feature_extended;
 
@@ -24,6 +26,7 @@ public class Feature_Project {
 
 	public Feature_Project(Project project, Feature feature) {
 		this();
+		this.id = ResourceHelpers.generateUUID();
 		this.project_name = project.getProject_name();
 		this.poc = feature.getPoc();
 		this.artifact_detail = feature.getArtifact_detail();
@@ -32,7 +35,7 @@ public class Feature_Project {
 		this.feature_extended = feature.getFeature_extended();
 	}
 
-	public Feature_Project(int id, String project_name, String poc, String artifact_detail, int feature_ref,
+	public Feature_Project(String id, String project_name, String poc, String artifact_detail, String feature_ref,
 			String used_year, boolean feature_extended) {
 		this();
 		this.id = id;
@@ -53,18 +56,19 @@ public class Feature_Project {
 				e.printStackTrace();
 			}
 		}
-		if (paramList.size() > 1) {
-			paramList.remove(0);
-		}
 		return paramList;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
 	public String getProject_name() {
 		return project_name;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getPoc() {
@@ -75,7 +79,7 @@ public class Feature_Project {
 		return artifact_detail;
 	}
 
-	public int getFeature_ref() {
+	public String getFeature_ref() {
 		return feature_ref;
 	}
 

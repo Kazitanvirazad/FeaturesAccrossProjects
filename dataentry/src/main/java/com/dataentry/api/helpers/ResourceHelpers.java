@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
+import java.util.UUID;
 
 public class ResourceHelpers {
 	public String getResource(String key, String resourcepath) {
@@ -26,6 +27,12 @@ public class ResourceHelpers {
 			e.printStackTrace();
 		}
 		return result != null ? result : "";
+	}
+
+	public static String generateUUID() {
+		// Randomly generates a UUID
+		UUID uuid = UUID.randomUUID();
+		return uuid.toString();
 	}
 
 }

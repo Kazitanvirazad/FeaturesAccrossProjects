@@ -117,7 +117,8 @@ public class DatabaseHelpers {
 			responseData.setError(true);
 			responseData.setMessage("Incorrect or invalid input");
 		} else {
-			List<Object> paramList = jsonFeature.createParamsList();
+			Feature feature1 = new Feature(jsonFeature);
+			List<Object> paramList = feature1.createParamsList();
 			String query = resourceHelpers.getResource("insert.feature.table", "dbQueries.properties");
 			try {
 				connection = orm_DBConnector.getConnection();
@@ -128,7 +129,7 @@ public class DatabaseHelpers {
 					connection.setAutoCommit(false);
 					DatabaseMgr databaseMgr = new DatabaseMgr();
 					List<Object> list = new ArrayList<>();
-					list.add(jsonFeature.getProject_name());
+					list.add(feature1.getProject_name());
 					ResultSet resultSet = databaseMgr.getDQLResultSetWithParameter(
 							resourceHelpers.getResource("select.checkproject.exist", "dbQueries.properties"), list,
 							connection);
@@ -145,23 +146,16 @@ public class DatabaseHelpers {
 							ResultSet resultSetJoinedTables = databaseMgr.getDQLResultSetWithParameter(joinedquery,
 									list, connection);
 							while (resultSetJoinedTables != null && resultSetJoinedTables.next()) {
-								Feature feature = new Feature(resultSetJoinedTables.getInt(1),
-										resultSetJoinedTables.getString(2), resultSetJoinedTables.getString(3),
-										resultSetJoinedTables.getString(4), resultSetJoinedTables.getString(5),
-										resultSetJoinedTables.getString(6), resultSetJoinedTables.getString(7),
-										resultSetJoinedTables.getString(8), resultSetJoinedTables.getString(9),
+								Project project = new Project(resultSetJoinedTables.getString(1),
+										resultSetJoinedTables.getBoolean(2), resultSetJoinedTables.getBoolean(3),
+										resultSetJoinedTables.getBoolean(4), resultSetJoinedTables.getBoolean(5),
+										resultSetJoinedTables.getBoolean(6), resultSetJoinedTables.getString(7),
+										resultSetJoinedTables.getString(8), resultSetJoinedTables.getBoolean(9),
 										resultSetJoinedTables.getString(10), resultSetJoinedTables.getBoolean(11),
-										resultSetJoinedTables.getString(12));
-								Project project = new Project(resultSetJoinedTables.getString(13),
-										resultSetJoinedTables.getBoolean(14), resultSetJoinedTables.getBoolean(15),
-										resultSetJoinedTables.getBoolean(16), resultSetJoinedTables.getBoolean(17),
-										resultSetJoinedTables.getBoolean(18), resultSetJoinedTables.getString(19),
-										resultSetJoinedTables.getString(20), resultSetJoinedTables.getBoolean(21),
-										resultSetJoinedTables.getString(22), resultSetJoinedTables.getBoolean(23),
-										resultSetJoinedTables.getString(24), resultSetJoinedTables.getString(25),
-										resultSetJoinedTables.getString(26), resultSetJoinedTables.getString(27),
-										resultSetJoinedTables.getString(28));
-								Feature_Project feature_Project = new Feature_Project(project, feature);
+										resultSetJoinedTables.getString(12), resultSetJoinedTables.getString(13),
+										resultSetJoinedTables.getString(14), resultSetJoinedTables.getString(15),
+										resultSetJoinedTables.getString(16));
+								Feature_Project feature_Project = new Feature_Project(project, feature1);
 								paramList = feature_Project.createParamsList();
 								isFeatureProjectAdded = databaseMgr.executeMultiTableDML(resourceHelpers.getResource(
 										"insert.featureproject.table", "dbQueries.properties"), paramList, connection);
@@ -216,9 +210,9 @@ public class DatabaseHelpers {
 						resourceHelpers.getResource("select.featureproject.table", "dbQueries.properties"), connection);
 
 				while (resultSet != null && resultSet.next()) {
-					Feature_Project feature_Project = new Feature_Project(resultSet.getInt(1), resultSet.getString(2),
-							resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5), resultSet.getString(6),
-							resultSet.getBoolean(7));
+					Feature_Project feature_Project = new Feature_Project(resultSet.getString(1),
+							resultSet.getString(2), resultSet.getString(3), resultSet.getString(4),
+							resultSet.getString(5), resultSet.getString(6), resultSet.getBoolean(7));
 					list.add(feature_Project);
 				}
 			}
@@ -257,9 +251,9 @@ public class DatabaseHelpers {
 						resourceHelpers.getResource("search.featureproject", "dbQueries.properties"), paramlist,
 						connection);
 				while (resultSet != null && resultSet.next()) {
-					Feature_Project feature_Project = new Feature_Project(resultSet.getInt(1), resultSet.getString(2),
-							resultSet.getString(3), resultSet.getString(4), resultSet.getInt(5), resultSet.getString(6),
-							resultSet.getBoolean(7));
+					Feature_Project feature_Project = new Feature_Project(resultSet.getString(1),
+							resultSet.getString(2), resultSet.getString(3), resultSet.getString(4),
+							resultSet.getString(5), resultSet.getString(6), resultSet.getBoolean(7));
 					datalist.add(feature_Project);
 				}
 			}

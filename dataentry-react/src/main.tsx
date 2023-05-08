@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import AddProjectDataFormPage from './components/AddProjectDataFormPage.tsx';
 import ListProjectTable from './components/ListProjectTable.tsx';
 import SearchProjectForm from './components/SearchProjectForm.tsx'
+import App from './App.tsx';
 
 document.title = 'Welcome | Data Entry';
 import {
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <App />
   </React.StrictMode>,
 )

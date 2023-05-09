@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -201,19 +203,15 @@ public class DatabaseHelpers {
 	public ResponseData getFeatureList() {
 		ORM_DBConnector orm_DBConnector = new ORM_DBConnector();
 		Connection connection = null;
-		List<Feature_Project> list = new ArrayList<>();
+		List<Object> list = new ArrayList<>();
 		DatabaseMgr databaseMgr = new DatabaseMgr();
 		try {
 			connection = orm_DBConnector.getConnection();
 			if (connection != null) {
 				ResultSet resultSet = databaseMgr.getDQLResultSet(
-						resourceHelpers.getResource("select.featureproject.table", "dbQueries.properties"), connection);
-
-				while (resultSet != null && resultSet.next()) {
-					Feature_Project feature_Project = new Feature_Project(resultSet.getString(1),
-							resultSet.getString(2), resultSet.getString(3), resultSet.getString(4),
-							resultSet.getString(5), resultSet.getString(6), resultSet.getBoolean(7));
-					list.add(feature_Project);
+						resourceHelpers.getResource("select.featureproject.data", "dbQueries.properties"), connection);
+				if (resultSet != null) {
+					list = getFeatureProjectData(resultSet);
 				}
 			}
 		} catch (SQLException | URISyntaxException e) {
@@ -240,21 +238,18 @@ public class DatabaseHelpers {
 		Connection connection = null;
 		DatabaseMgr databaseMgr = new DatabaseMgr();
 		List<Object> paramlist = new ArrayList<>();
-		List<Feature_Project> datalist = new ArrayList<>();
-		for (int i = 0; i < 19; i++) {
+		List<Object> datalist = new ArrayList<>();
+		for (int i = 0; i < 18; i++) {
 			paramlist.add(keyword);
 		}
 		try {
 			connection = orm_DBConnector.getConnection();
 			if (connection != null) {
 				ResultSet resultSet = databaseMgr.getDQLResultSetWithParameter(
-						resourceHelpers.getResource("search.featureproject", "dbQueries.properties"), paramlist,
+						resourceHelpers.getResource("search.featureproject.data", "dbQueries.properties"), paramlist,
 						connection);
-				while (resultSet != null && resultSet.next()) {
-					Feature_Project feature_Project = new Feature_Project(resultSet.getString(1),
-							resultSet.getString(2), resultSet.getString(3), resultSet.getString(4),
-							resultSet.getString(5), resultSet.getString(6), resultSet.getBoolean(7));
-					datalist.add(feature_Project);
+				if (resultSet != null) {
+					datalist = getFeatureProjectData(resultSet);
 				}
 			}
 		} catch (PSQLException e) {
@@ -313,5 +308,34 @@ public class DatabaseHelpers {
 		} else {
 			return new ResponseData(true, "Projects not found");
 		}
+	}
+
+	private List<Object> getFeatureProjectData(ResultSet resultset) {
+		List<Object> list = new ArrayList<>();
+		try {
+			while (resultset != null && resultset.next()) {
+				Map<String, Object> map = new HashMap<>();
+				map.put("category", resultset.getString(1));
+				map.put("sub_category", resultset.getString(2));
+				map.put("feature_name", resultset.getString(3));
+				map.put("type", resultset.getString(4));
+				map.put("project_name", resultset.getString(5));
+				map.put("poc", resultset.getString(6));
+				map.put("feature_extended", resultset.getBoolean(7));
+				map.put("alternate_POC", resultset.getString(8));
+				map.put("project_name", resultset.getString(9));
+				map.put("sector", resultset.getString(10));
+				map.put("client_base", resultset.getString(11));
+				map.put("domain", resultset.getString(12));
+				map.put("multi_brand", resultset.getBoolean(13));
+				map.put("multi_site", resultset.getBoolean(14));
+				map.put("last_served_year", resultset.getString(15));
+				map.put("artifact_detail", resultset.getString(16));
+				list.add(map);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 }

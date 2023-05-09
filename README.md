@@ -1,4 +1,4 @@
-<h2>Basic Data Entry Application for keeping records of projects in an organisation.</h2>
+<h2>Data Entry (Headless) Application for keeping records of projects in an organisation.</h2>
 <h4>Stateless REST API.</h4>
 <pre>Resources Used - <br />
 	AWS RDS - postgresql database<br />

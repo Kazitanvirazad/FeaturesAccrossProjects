@@ -310,6 +310,70 @@ public class DatabaseHelpers {
 		}
 	}
 
+	public ResponseData getDropdownData() {
+		ORM_DBConnector orm_DBConnector = new ORM_DBConnector();
+		Connection connection = null;
+		DatabaseMgr databaseMgr = new DatabaseMgr();
+		Map<String, List> map = new HashMap<>();
+
+		try {
+			connection = orm_DBConnector.getConnection();
+			if (connection != null) {
+				ResultSet resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.sector.sector_name", "dbQueries.properties"), connection);
+				List<String> sector_list = new ArrayList<>();
+				while (resultSet != null && resultSet.next()) {
+					sector_list.add(resultSet.getString(1));
+				}
+				map.put("sector", sector_list);
+
+				resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.practice.practice_name", "dbQueries.properties"),
+						connection);
+				List<String> practice_list = new ArrayList<>();
+				while (resultSet != null && resultSet.next()) {
+					practice_list.add(resultSet.getString(1));
+				}
+				map.put("practice", practice_list);
+
+				resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.domain.domain_name", "dbQueries.properties"), connection);
+				List<String> domain_list = new ArrayList<>();
+				while (resultSet != null && resultSet.next()) {
+					domain_list.add(resultSet.getString(1));
+				}
+				map.put("domain", domain_list);
+
+				resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.client_lead.cient_type", "dbQueries.properties"),
+						connection);
+				List<String> client_lead_list = new ArrayList<>();
+				while (resultSet != null && resultSet.next()) {
+					client_lead_list.add(resultSet.getString(1));
+				}
+				map.put("client_lead", client_lead_list);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+		if (connection == null) {
+			return new ResponseData(true, "Connection to database server failed");
+		} else {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (map.size() > 0) {
+			return new ResponseData(false, map);
+		} else {
+			return new ResponseData(true, "Sectors not found");
+		}
+	}
+
 	private List<Object> getFeatureProjectData(ResultSet resultset) {
 		List<Object> list = new ArrayList<>();
 		try {

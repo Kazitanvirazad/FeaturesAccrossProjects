@@ -23,6 +23,21 @@ create table sector(
 	CONSTRAINT PK_sector_sector_name PRIMARY KEY(sector_name)
 );
 
+create table practice(
+	practice_name VARCHAR(100) UNIQUE NOT NULL,
+	CONSTRAINT PK_practice_practice_name PRIMARY KEY(practice_name)
+);
+
+create table client_lead(
+	cient_type VARCHAR(100) UNIQUE NOT NULL,
+	CONSTRAINT client_lead_cient_type PRIMARY KEY(cient_type)
+);
+
+create table domain(
+	domain_name VARCHAR(100) UNIQUE NOT NULL,
+	CONSTRAINT PK_domain_domain_name PRIMARY KEY(domain_name)
+);
+
 create table feature (
 	feature_ref VARCHAR(500) UNIQUE NOT NULL,
 	project_name VARCHAR(100) NOT NULL,

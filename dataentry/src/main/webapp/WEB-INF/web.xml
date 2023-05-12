@@ -53,6 +53,17 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		<url-pattern>/projectlist</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<display-name>DropdownList</display-name>
+		<servlet-name>DropdownList</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.DropdownList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DropdownList</servlet-name>
+		<url-pattern>/dropdownlist</url-pattern>
+	</servlet-mapping>
+
+
 	<filter>
 		<filter-name>CorsFilter</filter-name>
 		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>

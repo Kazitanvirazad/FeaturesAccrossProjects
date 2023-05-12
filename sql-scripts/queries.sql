@@ -69,7 +69,7 @@
 --  p.client_base ilike 'Jenny Craig' or p.practice ilike 'Jenny Craig' or p.domain ilike 'Jenny Craig');
 
 
-SELECT f.category, f.sub_category, f.feature_name, f.type, fp.project_name, fp.poc, fp.feature_extended, f.alternate_POC, p.project_name, p.sector, p.client_base, p.domain, p.multi_brand, p.multi_site, p.last_served_year FROM feature_project fp, project p, feature f where f.feature_ref = fp.feature_ref and p.project_name = fp.project_name and (f.project_name ilike 'Jenny Craig' or f.category ilike 'Jenny Craig' or f.sub_category ilike 'Jenny Craig' or f.feature_name ilike 'Jenny Craig' or f.description ilike 'Jenny Craig' or f.type ilike 'Jenny Craig' or f.poc ilike 'Jenny Craig' or f.artifact_detail ilike 'Jenny Craig' or f.used_year ilike 'Jenny Craig' or f.alternate_POC ilike 'Jenny Craig' or p.sector ilike 'Jenny Craig' or p.project_contact_point ilike 'Jenny Craig' or p.brandnames ilike 'Jenny Craig' or p.project_notes ilike 'Jenny Craig' or p.last_served_year ilike 'Jenny Craig' or p.client_base ilike 'Jenny Craig' or p.practice ilike 'Jenny Craig' or p.domain ilike 'Jenny Craig');
+-- SELECT f.category, f.sub_category, f.feature_name, f.type, fp.project_name, fp.poc, fp.feature_extended, f.alternate_POC, p.project_name, p.sector, p.client_base, p.domain, p.multi_brand, p.multi_site, p.last_served_year FROM feature_project fp, project p, feature f where f.feature_ref = fp.feature_ref and p.project_name = fp.project_name and (f.project_name ilike 'Jenny Craig' or f.category ilike 'Jenny Craig' or f.sub_category ilike 'Jenny Craig' or f.feature_name ilike 'Jenny Craig' or f.description ilike 'Jenny Craig' or f.type ilike 'Jenny Craig' or f.poc ilike 'Jenny Craig' or f.artifact_detail ilike 'Jenny Craig' or f.used_year ilike 'Jenny Craig' or f.alternate_POC ilike 'Jenny Craig' or p.sector ilike 'Jenny Craig' or p.project_contact_point ilike 'Jenny Craig' or p.brandnames ilike 'Jenny Craig' or p.project_notes ilike 'Jenny Craig' or p.last_served_year ilike 'Jenny Craig' or p.client_base ilike 'Jenny Craig' or p.practice ilike 'Jenny Craig' or p.domain ilike 'Jenny Craig');
 
 -- select fp.* from feature_project fp, feature f,  project p where p.project_name = f.project_name and fp.project_name=f.project_name and fp.feature_ref = f.feature_ref and (f.project_name ilike 'Kazi Tanvir Azad' or f.category ilike 'Kazi Tanvir Azad' or f.sub_category ilike 'Kazi Tanvir Azad' or f.sub_category ilike 'Kazi Tanvir Azad' or f.feature_name ilike 'Kazi Tanvir Azad' or f.description ilike 'Kazi Tanvir Azad' or f.type ilike 'Kazi Tanvir Azad' or f.poc ilike 'Kazi Tanvir Azad' or f.artifact_detail ilike 'Kazi Tanvir Azad' or f.used_year ilike 'Kazi Tanvir Azad' or f.alternate_POC ilike 'Kazi Tanvir Azad' or p.sector ilike 'Kazi Tanvir Azad' or p.project_contact_point ilike 'Kazi Tanvir Azad' or  p.brandnames ilike 'Kazi Tanvir Azad' or p.project_notes ilike 'Kazi Tanvir Azad' or p.last_served_year ilike 'Kazi Tanvir Azad' or p.client_base ilike 'Kazi Tanvir Azad' or p.practice ilike 'Kazi Tanvir Azad' or p.domain ilike 'Kazi Tanvir Azad');
 
@@ -82,5 +82,15 @@ SELECT f.category, f.sub_category, f.feature_name, f.type, fp.project_name, fp.p
 -- select feature.* from feature; -- where project_name='Tronz TWS';
 -- LEFT OUTER JOIN feature F ON F.feature_ref= fp.feature_ref  
 -- LEFT OUTER JOIN project P on P.project_name = fp.project_name and P.project_name ='Jenny Craig';
+
+
+
+
+
+-- select project.* from project where prproject_name='Test1oject_name='Test1';
+delete from project where project_name='Test';
+-- insert into sector (sector_name) values ('Retail'), ('Healthcare'), ('FMCG');
+
+
 
 

@@ -1,11 +1,14 @@
 import serviceuriconfig from '../config/service-uri-config.json';
 import apiServiceBaseUrl from '../apiServiceBaseUrl';
 import GetProjectList from './GetProjectList';
+import Select from 'react-select';
 
 const AddFeatureDataForm = ({ formData }: any) => {
     let resData: any = {
         feature_extended: false
     };
+
+    let optionData = GetProjectList();
 
     let handleChange = (event: any) => {
         const name = event.target.name;
@@ -16,6 +19,12 @@ const AddFeatureDataForm = ({ formData }: any) => {
     let handleSelectChange = (event: any) => {
         let name = event.target.name;
         let value = event.target.value.toLowerCase() === 'true';
+        resData[name] = value;
+    };
+
+    let handleReactSelectChange = (event: any) => {
+        let name = event?.name;
+        let value = event?.value;
         resData[name] = value;
     };
 
@@ -48,10 +57,13 @@ const AddFeatureDataForm = ({ formData }: any) => {
                 <form id='add-feature-form' onSubmit={onFormSubmit} action="/addfeature" method="post">
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.project_name}>Project Name</label>
-                        <select className="form-control" name={formData.project_name} id={formData.project_name} onChange={handleChange} defaultValue="false">
-                            <GetProjectList />
-                        </select>
-                        {/* <input name={formData.project_name} className="form-control" type="text" id={formData.project_name} defaultValue="" onChange={handleChange} required /> */}
+                        <Select
+                            className="form-control"
+                            name={formData.project_name}
+                            id={formData.project_name}
+                            onChange={handleReactSelectChange}
+                            options={optionData}
+                        />
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.category}>Category</label>

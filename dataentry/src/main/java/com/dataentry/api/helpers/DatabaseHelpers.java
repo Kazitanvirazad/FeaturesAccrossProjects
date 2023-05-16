@@ -351,7 +351,7 @@ public class DatabaseHelpers {
 				while (resultSet != null && resultSet.next()) {
 					client_lead_list.add(resultSet.getString(1));
 				}
-				map.put("client_lead", client_lead_list);
+				map.put("client_base", client_lead_list);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

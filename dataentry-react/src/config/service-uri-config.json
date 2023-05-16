@@ -18,5 +18,9 @@
     "FeatureList": {
         "uri": "featurelist",
         "method": "GET"
+    },
+    "DropdownList": {
+        "uri": "dropdownlist",
+        "method": "GET"
     }
 }

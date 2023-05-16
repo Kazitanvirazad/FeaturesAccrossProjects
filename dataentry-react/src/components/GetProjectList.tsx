@@ -1,15 +1,24 @@
 import serviceuriconfig from '../config/service-uri-config.json';
 import apiServiceBaseUrl from '../apiServiceBaseUrl';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const GetProjectList = () => {
-    let [optionData, setOptionData] = useState([]);
+    const navigate = useNavigate();
     let url = apiServiceBaseUrl();
     let uri = serviceuriconfig.ProjectList.uri;
     let method = serviceuriconfig.ProjectList.method;
     url += uri;
+    let options: any = [];
 
-    if (optionData.length < 1) {
+    let addOptions = (data: string[]) => {
+        if (data && data.length > 0) {
+            data.map((item: string) => {
+                options.push({ 'value': item, 'label': item, 'name': 'project_name' });
+            });
+        }
+    }
+
+    if (options.length < 1) {
         fetch(url, {
             method: method,
             headers: {
@@ -19,22 +28,14 @@ const GetProjectList = () => {
             return response.json();
         }).then(data => {
             if (data && !data.error) {
-                setOptionData(data.data);
+                addOptions(data.data);
             } else {
                 alert(data.message);
+                navigate("/addproject");
             }
         });
     }
-
-    return (
-        <>
-            {optionData.length > 0 && optionData.map((item: string) => {
-                return (
-                    <option key={item} value={item}>{item}</option>
-                );
-            })}
-        </>
-    );
+    return options;
 };
 
 export default GetProjectList;

@@ -1,7 +1,11 @@
 import serviceuriconfig from '../config/service-uri-config.json';
 import apiServiceBaseUrl from '../apiServiceBaseUrl';
+import GetDropDownListItems from './GetDropDownListItems';
+import Select from 'react-select';
 
 const AddProjectDataForm = ({ formData }: any) => {
+    let options = GetDropDownListItems();
+    // console.log(options);
 
     let resData: any = {
         regionUS: false,
@@ -22,6 +26,12 @@ const AddProjectDataForm = ({ formData }: any) => {
     let handleSelectChange = (event: any) => {
         let name = event.target.name;
         let value = event.target.value.toLowerCase() === 'true';
+        resData[name] = value;
+    };
+
+    let handleReactSelectChange = (event: any) => {
+        let name = event?.name;
+        let value = event?.value;
         resData[name] = value;
     };
 
@@ -93,7 +103,13 @@ const AddProjectDataForm = ({ formData }: any) => {
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.sector}>Sector</label>
-                        <input name={formData.sector} className="form-control" type="text" id={formData.sector} defaultValue="" onChange={handleChange} required />
+                        <Select
+                            className="form-control"
+                            name={formData.sector}
+                            id={formData.sector}
+                            onChange={handleReactSelectChange}
+                            options={options['sector']}
+                        />
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.project_contact_point}>Project Contact Point</label>
@@ -127,15 +143,36 @@ const AddProjectDataForm = ({ formData }: any) => {
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.client_base}>Client Base</label>
-                        <input name={formData.client_base} className="form-control" type="text" id={formData.client_base} defaultValue="" onChange={handleChange} required />
+                        {/* <input name={formData.client_base} className="form-control" type="text" id={formData.client_base} defaultValue="" onChange={handleChange} required /> */}
+                        <Select
+                            className="form-control"
+                            name={formData.client_base}
+                            id={formData.client_base}
+                            onChange={handleReactSelectChange}
+                            options={options['client_base']}
+                        />
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.practice}>Practice</label>
-                        <input name={formData.practice} className="form-control" type="text" id={formData.practice} defaultValue="" onChange={handleChange} required />
+                        {/* <input name={formData.practice} className="form-control" type="text" id={formData.practice} defaultValue="" onChange={handleChange} required /> */}
+                        <Select
+                            className="form-control"
+                            name={formData.practice}
+                            id={formData.practice}
+                            onChange={handleReactSelectChange}
+                            options={options['practice']}
+                        />
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.domain}>Domain</label>
-                        <input name={formData.domain} className="form-control" type="text" id={formData.domain} defaultValue="" onChange={handleChange} required />
+                        {/* <input name={formData.domain} className="form-control" type="text" id={formData.domain} defaultValue="" onChange={handleChange} required /> */}
+                        <Select
+                            className="form-control"
+                            name={formData.domain}
+                            id={formData.domain}
+                            onChange={handleReactSelectChange}
+                            options={options['domain']}
+                        />
                     </div>
                     <div>
                         <input className="btn btn-primary" type="submit" />

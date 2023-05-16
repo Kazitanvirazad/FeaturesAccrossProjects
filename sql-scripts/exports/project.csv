@@ -1,0 +1,47 @@
+project_name,regionus,regionca,regioneu,regionaunz,regionchina,sector,project_contact_point,multi_brand,brandnames,multi_site,project_notes,last_served_year,client_base,practice,domain,id
+Movado,t,t,f,f,f,Retail,Anuj Jain,t,"Concord, Ebel,  Movado",t,us and ca served by single site,2019,External,SFCC,Ecommerce,1
+POC,t,f,f,f,f,Retail,Anuj,,,,"",,Internal,SFCC,Ecommerce,2
+Diesel,t,f,f,f,f,Retail,Anuj Jain,f,,f,"",2015,External,SFCC,Ecommerce,3
+IBM Sterling,t,f,f,f,f,Retail,Anuj Jain,f,,f,"",2020,Link Partner,SFCC,Ecommerce,4
+Tapestry | Coach,t,t,t,f,f,Retail,Anuj Jain,t,"Coach, Katspade, Stuart Weitzman",t,separate site per region and brand,,External,SFCC,Ecommerce,5
+Sothern Glazer's,t,f,f,f,f,FMCG,Anuj Jain,f,,f,"",2018,External,SFCC,Ecommerce,6
+Jenny Craig,t,t,f,t,f,HealthCare,Anuj Jain,f,,t,separate site per region,2023,External,SFCC,Ecommerce,7
+TPC,t,f,f,f,f,Retail,Anuj Jain,t,"Proactiv+, xout",f,"",2018,External,SFCC,Ecommerce,8
+TCP,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,9
+Worldpay,t,f,f,f,f,Retail,Anuj Jain,f,,f,"",,Link Partner,SFCC,Ecommerce,10
+MCM,t,t,t,f,t,Retail,Hemant Arora,t,,t,"",2019,External,SFCC,Ecommerce,11
+Loreal,t,,,,,FMCG,"",,,,"",,External,SFCC,Ecommerce,12
+Abercrombie & Fitch,t,,,,,Retail,Nishant Gupta,,,,"",,External,SFCC,Ecommerce,13
+M&S International,t,f,f,f,f,Retail,Anuj Jain,f,,t,separate site per region,,External,SFCC,Ecommerce,14
+GR & WBCD,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,15
+SHISEDO | BARE | BUXOM,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,16
+Carters,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,17
+Godiva,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,18
+L.L. Bean,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,19
+Marc Jacobs,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,20
+Moet Hennessy,t,t,t,t,f,Retail,Anuj Jain,f,,t,"",2015,External,SFCC,Ecommerce,21
+Petsmart,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,22
+Cybersource,t,f,f,f,f,Retail,Anuj Jain,f,,f,"",2017,Link Partner,SFCC,Ecommerce,23
+Beats,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,24
+Carol's Daughter,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,25
+Crabtree,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,26
+EYS,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,27
+MHAP,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,28
+Michaels,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,29
+New Balance,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,30
+Nivea,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,31
+SaksOff5th,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,32
+NYX,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,33
+VSP,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,34
+SessionM,t,,,,,Retail,"",,,,"",,Internal,SFCC,Ecommerce,35
+Goodyear,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,36
+ASDA,t,,,,,Retail,"",,,,"",,External,SFCC,Ecommerce,37
+Langtons,f,f,f,t,f,Retail,senthilkumar,t,Langtons,f,Langtons,2023,External,Salesforce B2C,eCommerce,
+Ariat International,t,f,t,f,f,Retail,senthilkumar,t,Ariat International,t,Ariat International,2023,External,Salesforce B2C,eCommerce,
+Gamestop,t,f,f,f,f,Retail,Bhanu,f,Gamestop,f,Gamestop,2022,External,Salesforce B2C,eCommerce,
+endeavour,f,f,f,t,f,Retail,Bhanu,t,"dan murphy, BWS, langtons",t,endeavour,2023,External,Salesforce B2C,eCommerce,
+Tumi,t,t,f,f,f,Retail,Bhanu,f,Tumi,t,Tumi,2023,External,Salesforce B2C,eCommerce,
+Pandora,t,t,t,t,t,Retail,Anita Mani,f,Pandora,t,"27 countries uc, ca, itally, au, singore, japan, switzlerland,",2023,External,Salesforce B2C,eCommerce,
+PVH,t,t,f,f,f,Retail,Rachit Goel,t,"Tommy, Calivn",t,PVH,2023,External,Salesforce B2C,eCommerce,
+M&S India,f,f,f,f,f,Retail,Rachit Goel,f,M&S,f,India,2021,External,Salesforce B2C,eCommerce,
+cigora,t,f,f,f,f,Retail,Suman,f,cigora,f,cigora,2021,External,Salesforce B2C,eCommerce,

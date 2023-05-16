@@ -1,0 +1,243 @@
+feature_ref,project_name,category,sub_category,feature_name,description,type,poc,artifact_detail,used_year,feature_extended,alternate_poc,id
+SMS-Integration-Attentive,,SMS,Integration,Attentive,"",Custom Integration,,,,,,1
+Taxation-CustomFeature-Tax breakup,,Taxation,CustomFeature,Tax breakup,"",Custom Integration,,,,,,2
+Taxation-Integration-Sabrix,,Taxation,Integration,Sabrix,Indirect taxation,Custom Integration,,,,,,3
+Payment-Integration-Spreedly,,Payment,Integration,Spreedly,unified payment gateway,Custom Integration,,,,,,4
+Payment-Integration-Apple Pay,,Payment,Integration,Apple Pay,"",Link Partner,,,,,,5
+Fraud Check-Integration-Riskified,,Fraud Check,Integration,Riskified,"",Custom Integration,,,,,,6
+Payment-Integration-GSI,,Payment,Integration,GSI,Express Checkout,Custom Integration,,,,,,7
+NFR-Tracking-Order Guard,,NFR,Tracking,Order Guard,Track order placed in last X time,Custom Integration,,,,,,8
+Email Marketing-Integration-Exact Target,,Email Marketing,Integration,Exact Target,Email subscription,Custom Integration,,,,,,9
+OMS-Integration-Sterling,,OMS,Integration,Sterling,"",Custom Integration,,,,,,10
+Analytics-Integration-GTM,,Analytics,Integration,GTM,"",Custom Integration,,,,,,11
+Wishlist-CustomFeature-Save For Later On Cart,,Wishlist,CustomFeature,Save For Later On Cart,"",Custom Integration,,,,,,12
+Address Validation-Integration-Ship Engine,,Address Validation,Integration,Ship Engine,"",Custom Integration,,,,,,13
+Taxation-Integration-Avalara,,Taxation,Integration,Avalara,"",Custom Integration,,,,,,14
+Taxation-Integration-Vertex,,Taxation,Integration,Vertex,"",Custom Integration,,,,,,15
+CRM-SF Integration-Salesforce CRM,,CRM,SF Integration,Salesforce CRM,"",Custom Integration,,,,,,16
+Payment-Integration-Cybersource,,Payment,Integration,Cybersource,"",Custom Integration,,,,,,17
+OMS-SF Integration-Salesforce OMS,,OMS,SF Integration,Salesforce OMS,"",Custom Integration,,,,,,18
+Customer Service-SF Integration-Salesforce Service Cloud,,Customer Service,SF Integration,Salesforce Service Cloud,"",Custom Integration,,,,,,19
+Email Marketing-SF Integration-Salesforce Maketing Cloud,,Email Marketing,SF Integration,Salesforce Maketing Cloud,"",Custom Integration,,,,,,20
+Email Marketing-Integration-Braze,,Email Marketing,Integration,Braze,"",Custom Integration,,,,,,21
+Rating & Reviews-Integration-Bazaarvoice,,Rating & Reviews,Integration,Bazaarvoice,"",Custom Integration,,,,,,22
+Captcha-Integration-Recaptcha,,Captcha,Integration,Recaptcha,"",Custom Integration,,,,,,23
+Payment-Integration-Worldpay,,Payment,Integration,Worldpay,"",Custom Integration,,,,,,24
+CMS-Integration-Amplience,,CMS,Integration,Amplience,"",Custom Integration,,,,,,25
+Payment-Integration-Alipay,,Payment,Integration,Alipay,"",Custom Integration,,,,,,26
+Payment-Integration-Usafe,,Payment,Integration,Usafe,"",Custom Integration,,,,,,27
+Payment-Integration-Wechat,,Payment,Integration,Wechat,"",Custom Integration,,,,,,28
+Tanslation-Integration-globallink,,Tanslation,Integration,globallink,"",Custom Integration,,,,,,29
+Quotes-Integration-TGCommerce,,Quotes,Integration,TGCommerce,"",Custom Integration,,,,,,30
+Payment-Integration-Amazonpay,,Payment,Integration,Amazonpay,"",Custom Integration,,,,,,31
+Payment-Integration-LGPlus Bank transfer,,Payment,Integration,LGPlus Bank transfer,"",Custom Integration,,,,,,32
+NFR-Performance-GTMetrix,,NFR,Performance,GTMetrix,"",Custom Integration,,,,,,33
+NFR-Performance-Lighthouse,,NFR,Performance,Lighthouse,"",Custom Integration,,,,,,34
+NFR-Performance-Quantum Matrix,,NFR,Performance,Quantum Matrix,"",Custom Integration,,,,,,35
+NFR-Performance-Blue triangle,,NFR,Performance,Blue triangle,"",Custom Integration,,,,,,36
+Infra-Initial Setup-deployment setup,,Infra,Initial Setup,deployment setup,"",Custom Integration,,,,,,37
+NFR-Accessibility-WCAG,,NFR,Accessibility,WCAG,"",Custom Integration,,,,,,38
+Headless-Integration-layer0,,Headless,Integration,layer0,react based,Custom Integration,,,,,,39
+Native App-Integration-react native,,Native App,Integration,react native,with graphql and Appsync of AWS used,Custom Integration,,,,,,40
+Headless-Integration-GraphQL,,Headless,Integration,GraphQL,"",Custom Integration,,,,,,41
+Headless-Integration-AWS AppSync,,Headless,Integration,AWS AppSync,"",Custom Integration,,,,,,42
+Page Template-Platform-Page Designer,,Page Template,Platform,Page Designer,"",Custom Integration,,,,,,43
+Compare-CustomFeature-Product Compare,,Compare,CustomFeature,Product Compare,"",Custom Integration,,,,,,44
+Recommendations-Platform-Predictive Intelligence -einstien,,Recommendations,Platform,Predictive Intelligence -einstien,"",Custom Integration,,,,,,45
+Social Registration-Integration-facebook register,,Social Registration,Integration,facebook register,"",Custom Integration,,,,,,46
+Social Login-Integration-facebook login,,Social Login,Integration,facebook login,"",Custom Integration,,,,,,47
+Fraud Check-Integration-kount,,Fraud Check,Integration,kount,"",Custom Integration,,,,,,48
+Image management-Platform-Dynamic imaging,,Image management,Platform,Dynamic imaging,"",Custom Integration,,,,,,49
+Video Management-Integration-youtube viedo via mediaplayer,,Video Management,Integration,youtube viedo via mediaplayer,"",Custom Integration,,,,,,50
+Replenishment-CustomFeature-susbscription,,Replenishment,CustomFeature,susbscription,"",Custom Integration,,,,,,51
+Chat-Integration-Live Chat,,Chat,Integration,Live Chat,"",Custom Integration,,,,,,52
+Search Engine Optimization-CustomFeature-hreflang,,Search Engine Optimization,CustomFeature,hreflang,"",Custom Integration,,,,,,53
+Social Sharing-Integration-ShareThis,,Social Sharing,Integration,ShareThis,"",Custom Integration,,,,,,54
+Recommendations-Platform-Predictive Inteligence Email ,,Recommendations,Platform,Predictive Inteligence Email ,"",Custom Integration,,,,,,55
+Chat-Integration-needle,,Chat,Integration,needle,"",Custom Integration,,,,,,56
+Rating & Reviews-Integration-Power Review API based,,Rating & Reviews,Integration,Power Review API based,"",Custom Integration,,,,,,57
+Chat-Integration-Tulip Chat,,Chat,Integration,Tulip Chat,"",Custom Integration,,,,,,58
+Image management-Integration-scene7,,Image management,Integration,scene7,"",Custom Integration,,,,,,59
+Maps-Integration-Baidu Maps,,Maps,Integration,Baidu Maps,"","",,,,,,119
+Plans-CustomFeature-subscription based plan menu,,Plans,CustomFeature,subscription based plan menu,"",Custom Feature,,,,,,60
+Payment-Integration-Adyen,,Payment,Integration,Adyen,"",Link Partner,,,,,,61
+Email Marketing-Integration-Responsys,,Email Marketing,Integration,Responsys,Send emails incase of Account creation and subscription,Custom Integration,,,,,,62
+Email Marketing-Integration-Cheetah Mail,,Email Marketing,Integration,Cheetah Mail,"",Custom Integration,,,,,,63
+Recommendations-Integration-Certona,,Recommendations,Integration,Certona,"",Custom Integration,,,,,,64
+Coupon Code-Integration-RPM,,Coupon Code,Integration,RPM,"",Custom Integration,,,,,,65
+Payment-Integration-PXP Integration,,Payment,Integration,PXP Integration,"",Custom Integration,,,,,,66
+Payment-Integration-Wechat Pay,,Payment,Integration,Wechat Pay,"",Custom Integration,,,,,,67
+Email Marketing-Integration-Error Handler,,Email Marketing,Integration,Error Handler,To send emails in case any issue in webservices based on configuration. This will not trigger email on each failure.,Link Partner,,,,,,68
+Login-Integration-Wechat SSO,,Login,Integration,Wechat SSO,User can link his DW account with wechat account,Custom Integration,,,,,,69
+Tag Manager-Integration-Tealium,,Tag Manager,Integration,Tealium,Track User Events and browsing data,Link Partner,,,,,,70
+Email Marketing-Integration-Experian,,Email Marketing,Integration,Experian,"",Custom Integration,,,,,,71
+Address Validation-Integration-QAS,,Address Validation,Integration,QAS,"",Link Partner,,,,,,72
+Cart Abandonment-Integration-Seewhy,,Cart Abandonment,Integration,Seewhy,"",Custom Integration,,,,,,73
+Payment-Integration-Paymentech,,Payment,Integration,Paymentech,"",Custom Integration,,,,,,74
+Gift Card-Integration-Relate,,Gift Card,Integration,Relate,"",Custom Integration,,,,,,75
+Tag Manager-Integration-Pixel tags,,Tag Manager,Integration,Pixel tags,"Tradedoubler, Struq, Rocketfuel,adroll, piston, olapic, google analytics,dartspotlight",Custom Integration,,,,,,76
+Social Media-Integration-Curulate,,Social Media,Integration,Curulate,"",Link Partner,,,,,,77
+Social Media-Integration-Olapic,,Social Media,Integration,Olapic,"",Link Partner,,,,,,78
+OMS-Integration-Order Motion,,OMS,Integration,Order Motion,Updated OrderMotion cartridge with additional features,Custom Integration,,,,,,79
+PIM-CustomFeature-Online Retailers - PDP,,PIM,CustomFeature,Online Retailers - PDP,Configuration of Online Retailers on PDP driven via Catalog,Custom Integration,,,,,,80
+OMS-Integration-DCL,,OMS,Integration,DCL,Integration with DCL - Fulfilment Partner,Custom Integration,,,,,,81
+Social Login-Integration-oAuth Integration,,Social Login,Integration,oAuth Integration,oAuth Integration with Beats ID,Custom Integration,,,,,,82
+Feeds-CustomFeature-Catalog Import utility,,Feeds,CustomFeature,Catalog Import utility,Catalog import utility to and from Excel suporting multiple locales,Custom Integration,,,,,,83
+IP Based Redirection-CustomFeature-IP2Location,,IP Based Redirection,CustomFeature,IP2Location,IP based redirection,Custom Integration,,,,,,84
+AB Testing-Integration-Optimisely,,AB Testing,Integration,Optimisely,"","",,,,,,85
+SMS-Integration-Iris,,SMS,Integration,Iris,"","",,,,,,86
+Payment-Integration-GiveX,,Payment,Integration,GiveX,"","",,,,,,87
+Payment-Integration-Borderfree,,Payment,Integration,Borderfree,"","",,,,,,88
+Analytics-Integration-Coremetrics,,Analytics,Integration,Coremetrics,Browsing data of users,"",,,,,,89
+Marketing-Integration-RichRelevance,,Marketing,Integration,RichRelevance,"Content placed on different pages based on user geography, purchase history etc","",,,,,,90
+Marketing-Integration-Bloomreach,,Marketing,Integration,Bloomreach,Content placed on different pages based on the browsing data,"",,,,,,91
+Payment-Integration-Visa Checkout,,Payment,Integration,Visa Checkout,"","",,,,,,92
+Gift Card-Integration-Vantiv,,Gift Card,Integration,Vantiv,"","",,,,,,93
+Analytics-Integration-Media Mind,,Analytics,Integration,Media Mind,"","",,,,,,94
+Tag Manager-Integration-Link Share,,Tag Manager,Integration,Link Share,"","",,,,,,95
+Recommendations-Integration-IGO Digital,,Recommendations,Integration,IGO Digital,"","",,,,,,96
+Feeds-CustomFeature-Google Merchant,,Feeds,CustomFeature,Google Merchant,"","",,,,,,97
+Loyalty-Integration-SessionM,,Loyalty,Integration,SessionM,"","",,,,,,98
+Payment-Integration-Payeezy,,Payment,Integration,Payeezy,"","",,,,,,99
+Recommendations-Integration-MYBuys,,Recommendations,Integration,MYBuys,"","",,,,,,100
+Social Login-Integration-Janrain,,Social Login,Integration,Janrain,"","",,,,,,101
+Scheduled Delivery-Integration-Deliv,,Scheduled Delivery,Integration,Deliv,"","",,,,,,102
+Analytics-Integration-Dynatrace,,Analytics,Integration,Dynatrace,"","",,,,,,103
+BM Extension-CustomFeature-BM Catalog campaign search module,,BM Extension,CustomFeature,BM Catalog campaign search module,"","",,,,,,104
+BM Extension-CustomFeature-BM Customer search module,,BM Extension,CustomFeature,BM Customer search module,"","",,,,,,105
+Tag Manager-Integration-Twilio,,Tag Manager,Integration,Twilio,"","",,,,,,106
+Tag Manager-Integration-Certain Source,,Tag Manager,Integration,Certain Source,"","",,,,,,107
+Analytics-Integration-Omniture,,Analytics,Integration,Omniture,"","",,,,,,108
+Marketing-Integration-Channel Advisor,,Marketing,Integration,Channel Advisor,"","",,,,,,109
+BM Extension-CustomFeature-BM Extension : Bulk Inventory Update,,BM Extension,CustomFeature,BM Extension : Bulk Inventory Update,"","",,,,,,110
+BM Extension-CustomFeature-BM Extension : Hide/UnHide product,,BM Extension,CustomFeature,BM Extension : Hide/UnHide product,"","",,,,,,111
+Shipping-Integration-Fedex : Shipment Tracking,,Shipping,Integration,Fedex : Shipment Tracking,"","",,,,,,112
+Shipping-Integration-Fedex : Shipment Estimate,,Shipping,Integration,Fedex : Shipment Estimate,"","",,,,,,113
+Payment Refund-Integration-Alipay Refund,,Payment Refund,Integration,Alipay Refund,"","",,,,,,114
+Payment Refund-Integration-Wechat Refund,,Payment Refund,Integration,Wechat Refund,"","",,,,,,115
+Social Login-Integration-Wechat Login,,Social Login,Integration,Wechat Login,"","",,,,,,116
+Social Login-Integration-Weibo Login,,Social Login,Integration,Weibo Login,"","",,,,,,117
+Analytics-Integration-Baidu Analytics,,Analytics,Integration,Baidu Analytics,"","",,,,,,118
+Postcode Lookup-CustomFeature-Postcode lookup,,Postcode Lookup,CustomFeature,Postcode lookup,"","",,,,,,120
+Browser Check-CustomFeature-Unsupported browser,,Browser Check,CustomFeature,Unsupported browser,"","",,,,,,121
+Product Cycler-CustomFeature-Product Cycler,,Product Cycler,CustomFeature,Product Cycler,"","",,,,,,122
+Responsive Design-CustomFeature-Full responsive design approach and best practices,,Responsive Design,CustomFeature,Full responsive design approach and best practices,"","",,,,,,123
+Internationalization-CustomFeature-Multi-lingual JS support,,Internationalization,CustomFeature,Multi-lingual JS support,"","",,,,,,124
+Video Management-CustomFeature-YouTube integration,,Video Management,CustomFeature,YouTube integration,"","",,,,,,125
+Feeds-CustomFeature-Product catalogue upload,,Feeds,CustomFeature,Product catalogue upload,"","",,,,,,126
+Feeds-CustomFeature-Bulk customer import,,Feeds,CustomFeature,Bulk customer import,"","",,,,,,127
+Gift Card-CustomFeature-Gift certificate,,Gift Card,CustomFeature,Gift certificate,"","",,,,,,128
+Gift Card-Integration-Valuelink,,Gift Card,Integration,Valuelink,"","",,,,,,129
+Analytics-Integration-Adobe Tag Manager,,Analytics,Integration,Adobe Tag Manager,"","",,,,,,130
+CDN-Integration-Akamai,,CDN,Integration,Akamai,"","",,,,,,131
+Email Marketing-Integration-Axciom,,Email Marketing,Integration,Axciom,"","",,,,,,133
+Payment-CustomFeature-Payment Abstraction Layer,,Payment,CustomFeature,Payment Abstraction Layer,"","",,,,,,134
+OMS-CustomFeature-ESB,,OMS,CustomFeature,ESB,"","",,,,,,135
+Payment-Integration-SOFORT,,Payment,Integration,SOFORT,"","",,,,,,136
+Address Verification-Integration-USPS,,Address Verification,Integration,USPS,"","",,,,,,137
+Image management-Integration-TULIP,,Image management,Integration,TULIP,"","",,,,,,138
+Payment-Integration-Shift4,,Payment,Integration,Shift4,"","",,,,,,139
+Taxation-Integration-ADP,,Taxation,Integration,ADP,"","",,,,,,140
+Rating & Reviews-Integration-Pluck,,Rating & Reviews,Integration,Pluck,"","",,,,,,141
+Fraud Check-Integration-Accertify,,Fraud Check,Integration,Accertify,"","",,,,,,142
+Email Marketing-Integration-89 Degrees,,Email Marketing,Integration,89 Degrees,"","",,,,,,143
+Payment-Integration-PayPal HSS,,Payment,Integration,PayPal HSS,"","",,,,,,144
+Payment-Integration-IPay88,,Payment,Integration,IPay88,"","",,,,,,145
+Loyalty-Integration-Navision Loyalty,,Loyalty,Integration,Navision Loyalty,"","",,,,,,146
+Chat-Integration-Zopim,,Chat,Integration,Zopim,"","",,,,,,147
+Email Marketing-Integration-Bronto,,Email Marketing,Integration,Bronto,"","",,,,,,149
+OMS-Integration-Navision OMS,,OMS,Integration,Navision OMS,"","",,,,,,150
+CMS-CustomFeature-Articles View,,CMS,CustomFeature,Articles View,"","",,,,,,151
+Cart Abandonment-Integration-See Why,,Cart Abandonment,Integration,See Why,"","",,,,,,152
+Virtual Try-on-Integration-VTO-FitPhoto,,Virtual Try-on,Integration,VTO-FitPhoto,"","",,,,,,153
+Online Optical System-Benefits and Insurance-Integration-OOS,,Online Optical System-Benefits and Insurance,Integration,OOS,"","",,,,,,154
+OMS-Integration-Order Center,,OMS,Integration,Order Center,"","",,,,,,155
+Email Marketing-Integration-Eloqua,,Email Marketing,Integration,Eloqua,"","",,,,,,156
+Customer Service-Integration-OC-CSR,,Customer Service,Integration,OC-CSR,"","",,,,,,157
+Gift Card-Integration-OC-Gift Card,,Gift Card,Integration,OC-Gift Card,"","",,,,,,158
+Payment-Integration-PayPal-CYBS,,Payment,Integration,PayPal-CYBS,"","",,,,,,159
+Testimonial-Integration-Testimonials,,Testimonial,Integration,Testimonials,"","",,,,,,160
+Image management-Integration-Rx-Image Upload,,Image management,Integration,Rx-Image Upload,"","",,,,,,161
+Payment-Integration-Benefits payment,,Payment,Integration,Benefits payment,"","",,,,,,162
+Payment-Integration-Paypal through Cardinal Commerce,,Payment,Integration,Paypal through Cardinal Commerce,"","",,,,,,163
+Cross Border Fulfillment-Integration-Borderlink,,Cross Border Fulfillment,Integration,Borderlink,"","",,,,,,164
+Tag Manager-Integration-55 Tagging,,Tag Manager,Integration,55 Tagging,"","",,,,,,165
+Order Management-Integration-Radial,,Order Management,Integration,Radial,"","",,,,,,166
+Product Selection & Checkout-Integration-Tetris - T5,,Product Selection & Checkout,Integration,Tetris - T5,"","",,,,,,167
+Web Services-CustomFeature-Rest API Framework,,Web Services,CustomFeature,Rest API Framework,"","",,,,,,168
+Chat-Integration-Touch Commerce,,Chat,Integration,Touch Commerce,"","",,,,,,169
+AB Testing-Integration-M Box,,AB Testing,Integration,M Box,"","",,,,,,170
+Tag Manager-Integration-Media Pixels,,Tag Manager,Integration,Media Pixels,"","",,,,,,171
+AB Testing-Integration-Maxymiser,,AB Testing,Integration,Maxymiser,"","",,,,,,174
+Payment-Integration-Arvato Cartridge,,Payment,Integration,Arvato Cartridge,"","",,,,,,175
+Search Engine Optimization-Integration-GSA Cartridge,,Search Engine Optimization,Integration,GSA Cartridge,"","",,,,,,176
+CRM-Integration-Procampaign Cratridge,,CRM,Integration,Procampaign Cratridge,"","",,,,,,177
+Social Media-Integration-Shariff Cartridge,,Social Media,Integration,Shariff Cartridge,"","",,,,,,178
+Payment-Integration-Klarna,,Payment,Integration,Klarna,"","",,,,,,179
+Payment-Integration-Global-E,,Payment,Integration,Global-E,"","",,,,,,180
+Feeds-Integration-simplefeeds,,Feeds,Integration,simplefeeds,"","",,,,,,181
+Tag Manager-Integration-Collection point,,Tag Manager,Integration,Collection point,"","",,,,,,182
+Analytics-Integration-Mix panel,,Analytics,Integration,Mix panel,"","",,,,,,183
+Social Login-Integration-Gigya,,Social Login,Integration,Gigya,"","",,,,,,184
+Social Media-Integration-Pinterest,,Social Media,Integration,Pinterest,"","",,,,,,185
+Loyalty-Integration-Coupon Media,,Loyalty,Integration,Coupon Media,"","",,,,,,186
+CMS-Integration-Word Press,,CMS,Integration,Word Press,"","",,,,,,172
+Marketing-Integration-Link Share,,Marketing,Integration,Link Share,"","",,,,,,132
+BM Extension-CustomFeature-EncryptionDescryptionUtility,,BM Extension,CustomFeature,EncryptionDescryptionUtility,"","",,,,,,173
+Payment-Integration-PayFlowPro,,Payment,Integration,PayFlowPro,"","",,,,,,187
+Customizer-Integration-Shoe Customizer,,Customizer,Integration,Shoe Customizer,"","",,,,,,188
+Gift Card-Integration-Profit Point,,Gift Card,Integration,Profit Point,"","",,,,,,189
+Address Validation-Integration-PFSWEB,,Address Validation,Integration,PFSWEB,"","",,,,,,190
+Affiliate Marketing-Integration-Facebook,,Affiliate Marketing,Integration,Facebook,"","",,,,,,191
+Affiliate Marketing-Integration-Google Shopping,,Affiliate Marketing,Integration,Google Shopping,"","",,,,,,192
+Affiliate Marketing-Integration-Mercent,,Affiliate Marketing,Integration,Mercent,"","",,,,,,193
+Affiliate Marketing-Integration-Channel Intelligence,,Affiliate Marketing,Integration,Channel Intelligence,"","",,,,,,194
+Tag Manager-Integration-Adroll,,Tag Manager,Integration,Adroll,"","",,,,,,195
+Video Management-Integration-Invodo,,Video Management,Integration,Invodo,"","",,,,,,196
+Video Management-Integration-YouTube,,Video Management,Integration,YouTube,"","",,,,,,197
+CMS-Integration-FirstSpirit,,CMS,Integration,FirstSpirit,"","",,,,,,198
+CMS-Integration-SiteCore,,CMS,Integration,SiteCore,"","",,,,,,199
+Taxation-Integration-PFSWEB,,Taxation,Integration,PFSWEB,"","",,,,,,200
+Taxation-Integration-Vertex-L,,Taxation,Integration,Vertex-L,"","",,,,,,201
+Taxation-Integration-Vertex-O,,Taxation,Integration,Vertex-O,"","",,,,,,202
+Promotion-Integration-Icommerce Agent (App CC),,Promotion,Integration,Icommerce Agent (App CC),"","",,,,,,203
+Loyalty-Integration-500 Friends Loyalty,,Loyalty,Integration,500 Friends Loyalty,"","",,,,,,204
+Loyalty-Integration-Crowd Twist,,Loyalty,Integration,Crowd Twist,"","",,,,,,205
+Fraud Check-Integration-Cybersource Fraud,,Fraud Check,Integration,Cybersource Fraud,"","",,,,,,206
+Refferal-Integration-Extole,,Refferal,Integration,Extole,"","",,,,,,207
+E-Magzine-Integration-Zmags,,E-Magzine,Integration,Zmags,"","",,,,,,208
+Rating & Reviews-Integration-Custom RR,,Rating & Reviews,Integration,Custom RR,"","",,,,,,209
+AB Testing-Integration-HiConversion,,AB Testing,Integration,HiConversion,"","",,,,,,210
+AB Testing-Integration-DW Native AB Test,,AB Testing,Integration,DW Native AB Test,"","",,,,,,211
+Shopping-Integration-Taaz,,Shopping,Integration,Taaz,"","",,,,,,212
+Shopping-Integration-Drive Commerce,,Shopping,Integration,Drive Commerce,"","",,,,,,213
+Express Shipping-Integration-ShopRunner,,Express Shipping,Integration,ShopRunner,"","",,,,,,214
+Analytics-Integration-Google Analytics,,Analytics,Integration,Google Analytics,"","",,,,,,215
+Payment-Integration-Payment Tech,,Payment,Integration,Payment Tech,"","",,,,,,216
+Social Sharing-Integration-AddThis,,Social Sharing,Integration,AddThis,"","",,,,,,217
+Social Sharing-Integration-Native share,,Social Sharing,Integration,Native share,"","",,,,,,218
+Chat-Integration-Live Agent,,Chat,Integration,Live Agent,"","",,,,,,219
+Chat-Integration-Live Person,,Chat,Integration,Live Person,"","",,,,,,220
+Store Locator-Integration-Where to get it,,Store Locator,Integration,Where to get it,"","",,,,,,221
+Store Locator-Integration-Google Store Locator,,Store Locator,Integration,Google Store Locator,"","",,,,,,222
+Store Locator-Integration-Photon Store Locator,,Store Locator,Integration,Photon Store Locator,"","",,,,,,223
+Gifting-Integration-Loop Commerce,,Gifting,Integration,Loop Commerce,"","",,,,,,224
+Order Replishment-Integration-Order Groove,,Order Replishment,Integration,Order Groove,"","",,,,,,225
+Order Replishment-Integration-Custom AR,,Order Replishment,Integration,Custom AR,"","",,,,,,226
+OMS-Integration-PFSWEB,,OMS,Integration,PFSWEB,"","",,,,,,227
+OMS-Integration-SAP,,OMS,Integration,SAP,"","",,,,,,228
+QA-Integration-Baazar Voice QA,,QA,Integration,Baazar Voice QA,"","",,,,,,229
+Payment-Integration-Paymetric,,Payment,Integration,Paymetric,"","",,,,,,230
+Payment-Integration-Paypal Express,,Payment,Integration,Paypal Express,"","",,,,,,231
+Payment-Integration-Paypal Incontext,,Payment,Integration,Paypal Incontext,"","",,,,,,232
+Payment-Integration-Paypal standard,,Payment,Integration,Paypal standard,"","",,,,,,233
+Payment-Integration-Paypal Credit,,Payment,Integration,Paypal Credit,"","",,,,,,234
+Payment-Integration-Cardinal Commerce,,Payment,Integration,Cardinal Commerce,"","",,,,,,236
+CMS-Integration-Bazaar Voice Curation,,CMS,Integration,Bazaar Voice Curation,"","",,,,,,237
+BOPIS-Integration-Kibo,,BOPIS,Integration,Kibo,"","",,,,,,238
+Order Tracking-Integration-Narvar,,Order Tracking,Integration,Narvar,"","",,,,,,239
+CRM-Integration-Harte Hanks,,CRM,Integration,Harte Hanks,"","",,,,,,240
+Tag Manager-Integration-Brightex,,Tag Manager,Integration,Brightex,"","",,,,,,241
+Payment-Integration-Affirm,,Payment,Integration,Affirm,Payment Gateway Installment,Custom Integration,,,,,,242
+Payment-Integration-Cybersource-PFSWeb,,Payment,Integration,Payment-Integration-Cybersource-PFSWeb,"","",,,,,,235
+Rating & Reviews-Integration-Bazaar voice,,Rating & Reviews,Integration,Bazaar Voice Recommended reviews,"","",,,,,,148

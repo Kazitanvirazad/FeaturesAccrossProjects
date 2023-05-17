@@ -10,8 +10,8 @@ Technology Used - <br />
 	PostgreSQL database<br />
 	Apache Tomcat server v9</pre><br />
 <h4>Benefits of Application - </h4>
-	1. Search feature/integration implemented across already build project(s)
-	2. Looking for reusable assets features/integrations
-	3. Usage static data of features built across projects for RFPs/Sales Proposals
-	4. Product Managers to upgrade them on the features and their workflows
-	5. Provision to add more advanced features and projects inside application
+	1. Search feature/integration implemented across already build project(s)<br />
+	2. Looking for reusable assets features/integrations<br />
+	3. Usage static data of features built across projects for RFPs/Sales Proposals<br />
+	4. Product Managers to upgrade them on the features and their workflows<br />
+	5. Provision to add more advanced features and projects inside application<br />

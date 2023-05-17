@@ -352,6 +352,22 @@ public class DatabaseHelpers {
 					client_lead_list.add(resultSet.getString(1));
 				}
 				map.put("client_base", client_lead_list);
+
+				resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.feature.category", "dbQueries.properties"), connection);
+				List<String> category_list = new ArrayList<>();
+				while (resultSet != null && resultSet.next()) {
+					category_list.add(resultSet.getString(1));
+				}
+				map.put("category", category_list);
+
+				resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.feature.sub_category", "dbQueries.properties"), connection);
+				List<String> sub_category_list = new ArrayList<>();
+				while (resultSet != null && resultSet.next()) {
+					sub_category_list.add(resultSet.getString(1));
+				}
+				map.put("sub_category", sub_category_list);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -372,6 +388,45 @@ public class DatabaseHelpers {
 		} else {
 			return new ResponseData(true, "Sectors not found");
 		}
+	}
+
+	public ResponseData getProjectsData() {
+		ORM_DBConnector orm_DBConnector = new ORM_DBConnector();
+		Connection connection = null;
+		DatabaseMgr databaseMgr = new DatabaseMgr();
+		List<Project> projectList = new ArrayList<>();
+		try {
+			connection = orm_DBConnector.getConnection();
+			if (connection != null) {
+				ResultSet resultSet = databaseMgr.getDQLResultSet(
+						resourceHelpers.getResource("select.project.table", "dbQueries.properties"), connection);
+				while (resultSet != null && resultSet.next()) {
+					projectList.add(new Project(resultSet.getString(1), resultSet.getBoolean(2),
+							resultSet.getBoolean(3), resultSet.getBoolean(4), resultSet.getBoolean(5),
+							resultSet.getBoolean(6), resultSet.getString(7), resultSet.getString(8),
+							resultSet.getBoolean(9), resultSet.getString(10), resultSet.getBoolean(11),
+							resultSet.getString(12), resultSet.getString(13), resultSet.getString(14),
+							resultSet.getString(15), resultSet.getString(16)));
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+		if (connection == null) {
+			return new ResponseData(true, "Connection to database server failed");
+		} else {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (projectList.size() > 0) {
+			return new ResponseData(false, projectList);
+		}
+		return new ResponseData(true, "Projects not found");
 	}
 
 	private List<Object> getFeatureProjectData(ResultSet resultset) {

@@ -10,7 +10,9 @@ const GetDropDownListItems = () => {
         practice: [],
         client_base: [],
         domain: [],
-        sector: []
+        sector: [],
+        category: [],
+        sub_category: []
     };
 
     let addOptions = (data: any) => {
@@ -26,6 +28,12 @@ const GetDropDownListItems = () => {
         data.client_base.map((item: string) => {
             options.client_base.push({ 'value': item, 'label': item, 'name': 'client_base' });
         });
+        data.category.map((item: string) => {
+            options.category.push({ 'value': item, 'label': item, 'name': 'category' });
+        });
+        data.sub_category.map((item: string) => {
+            options.sub_category.push({ 'value': item, 'label': item, 'name': 'sub_category' });
+        });
     }
 
     if (options.practice.length < 1) {
@@ -39,8 +47,6 @@ const GetDropDownListItems = () => {
         }).then(data => {
             if (data && !data.error) {
                 addOptions(data.data);
-                console.log(options);
-
             } else {
                 alert(data.message);
             }

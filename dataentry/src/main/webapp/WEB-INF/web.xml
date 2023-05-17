@@ -52,7 +52,6 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		<servlet-name>ProjectList</servlet-name>
 		<url-pattern>/projectlist</url-pattern>
 	</servlet-mapping>
-
 	<servlet>
 		<display-name>DropdownList</display-name>
 		<servlet-name>DropdownList</servlet-name>
@@ -61,6 +60,16 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	<servlet-mapping>
 		<servlet-name>DropdownList</servlet-name>
 		<url-pattern>/dropdownlist</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>ProjectDataList</display-name>
+		<servlet-name>ProjectDataList</servlet-name>
+		<servlet-class>com.dataentry.api.controllers.ProjectDataList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProjectDataList</servlet-name>
+		<url-pattern>/projectdatalist</url-pattern>
 	</servlet-mapping>
 
 

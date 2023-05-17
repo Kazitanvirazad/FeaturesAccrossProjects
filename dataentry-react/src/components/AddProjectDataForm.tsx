@@ -143,7 +143,6 @@ const AddProjectDataForm = ({ formData }: any) => {
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.client_base}>Client Base</label>
-                        {/* <input name={formData.client_base} className="form-control" type="text" id={formData.client_base} defaultValue="" onChange={handleChange} required /> */}
                         <Select
                             className="form-control"
                             name={formData.client_base}
@@ -154,7 +153,6 @@ const AddProjectDataForm = ({ formData }: any) => {
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.practice}>Practice</label>
-                        {/* <input name={formData.practice} className="form-control" type="text" id={formData.practice} defaultValue="" onChange={handleChange} required /> */}
                         <Select
                             className="form-control"
                             name={formData.practice}
@@ -165,7 +163,6 @@ const AddProjectDataForm = ({ formData }: any) => {
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor={formData.domain}>Domain</label>
-                        {/* <input name={formData.domain} className="form-control" type="text" id={formData.domain} defaultValue="" onChange={handleChange} required /> */}
                         <Select
                             className="form-control"
                             name={formData.domain}

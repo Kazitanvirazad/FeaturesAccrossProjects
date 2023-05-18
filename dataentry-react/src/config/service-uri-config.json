@@ -22,7 +22,7 @@
     "DropdownList": {
         "uri": "dropdownlist",
         "method": "GET"
-    ,
+    },
     "ProjectDataList": {
         "uri": "projectdatalist",
         "method": "GET"

@@ -7,15 +7,16 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 
 import org.postgresql.util.PSQLException;
 
+import com.dataentry.api.cache.CacheUtil;
 import com.dataentry.api.dao.Feature;
 import com.dataentry.api.dao.Feature_Project;
 import com.dataentry.api.dao.Project;
@@ -23,6 +24,9 @@ import com.dataentry.api.response.ResponseData;
 import com.dataentry.database.helpers.ORM_DBConnector;
 import com.dataentry.database.utils.DatabaseMgr;
 import com.google.gson.Gson;
+
+import net.sf.ehcache.Cache;
+import net.sf.ehcache.Element;
 
 public class DatabaseHelpers {
 	private static ResourceHelpers resourceHelpers = new ResourceHelpers();
@@ -269,6 +273,10 @@ public class DatabaseHelpers {
 			}
 		}
 		if (datalist.size() > 0) {
+			Cache cache = CacheUtil.getCache(CacheUtil.EHCACHE_NAME);
+			if (cache != null) {
+				cache.put(new Element(keyword, datalist));
+			}
 			return new ResponseData(false, datalist);
 		} else {
 			return new ResponseData(true, "No Features found");
@@ -424,6 +432,10 @@ public class DatabaseHelpers {
 			}
 		}
 		if (projectList.size() > 0) {
+			Cache cache = CacheUtil.getCache(CacheUtil.EHCACHE_NAME);
+			if (cache != null) {
+				cache.put(new Element(CacheUtil.PROJECT_DATA_LIST, projectList));
+			}
 			return new ResponseData(false, projectList);
 		}
 		return new ResponseData(true, "Projects not found");
